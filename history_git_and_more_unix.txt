@@ -1,0 +1,213 @@
+    1  cd ~/Desktop/workshop/unix_intro
+    2  date
+    3  ?
+    4  help
+    5  date
+    6  date -u
+    7  clear
+    8  head
+    9  head example.txt
+   10  head -n 5 example.txt
+   11  head -n 11 example.txt
+   12  head --help
+   13  man head
+   14  head
+   15  home
+   16  pud
+   17  pwd
+   18  ls
+   19  head notes.txt
+   20  head experiment/notes.txt
+   21  head experiment/notes.txt 
+   22  head example.txt 
+   23  hea example.txt
+   24  pwd
+   25  less example.txt 
+   26  less --help
+   27  wc --help
+   28  cp example.txt example_copy.txt
+   29  ls
+   30  cp example.txt data/example_2.txt
+   31  ls data/
+   32  clear
+   33  mv example_copy.txt experiment/
+   34  ls
+   35  ls experiment/
+   36  rm experiment/example_copy.txt 
+   37  nano --help
+   38  nano sample_names.txt
+   39  head sample_names.txt 
+   40  mkdir subset
+   41  ls
+   42  rm subset/
+   43  rmdir subset/
+   44  clear
+   45  ls data/all_samples/ | wc -l
+   46  ls > directory_contents.txt
+   47  ls
+   48  less directory_contents.txt 
+   49  head directory_contents.txt 
+   50  ls *.txt | wc -l
+   51  ls *.txt
+   52  ls
+   53  ls experiment/
+   54  ls data/
+   55  pwd
+   56  ls data/all_samples/
+   57  ls data/all_samples/*.txt 
+   58  ls data/all_samples/*.txt | wc -l
+   59  cd data/all_samples/
+   60  ls
+   61  clear
+   62  pwd
+   63  mkdir fastq_files
+   64  ls
+   65  ls fastq_files/
+   66  ls *.fq
+   67  ls *.fq | wc -l
+   68  mv *.fq fastq_files/
+   69  ls *.fq
+   70  ls fastq_files/
+   71  ls fastq_files/ | wc -l
+   72  history
+   73  history | tail 
+   74  pwd
+   75  ls
+   76  cd ..
+   77  ls
+   78  cd ..
+   79  ls
+   80  cd six_commands/
+   81  ls
+   82  head gene_annotations.tsv
+   83  head -n 1 gene_annotations.tsv
+   84  wc -l gene_annotations.tsv
+   85  cut --help
+   86  cut -f 1 gene_annotations.tsv
+   87  cut -f 1 gene_annotations.tsv | head
+   88  cut -f 1,3 gene_annotations.tsv | head
+   89  less colors.txt
+   90  less colors.txt | grep blue
+   91  head colors.txt | grep blue
+   92  grep re colors.txt 
+   93  grep K09765 gene_annotations.tsv
+   94  grep K18979 gene_annotations.tsv
+   95  less gene_annotations.tsv
+   96  more --help
+   97  paste colors.txt colores.txt
+   98  grep indigo *txt
+   99  grep indigo *.t*
+  100  pwd
+  101  cd ..
+  102  pwd
+  103  my_var=TUCSON
+  104  echo alex sielaff
+  105  echo my_var
+  106  echo $my_var
+  107  for item in earth mars venus; do echo $item; done
+  108  for item in earth mars venus; do echo $item; echo $item > planets.txt; done
+  109  ls
+  110  less planets.txt 
+  111  head plan
+  112  head planets.txt 
+  113  head planets.txt 
+  114  for item in earth mars venus; do echo $item; echo $item >> planets.txt; done
+  115  head planets.txt 
+  116  for item in earth mars venus; do echo $item; echo $item >> planets.txt; done
+  117  head planets.txt 
+  118  cat planets.txt 
+  119  for item in $(cat planets.txt); do echo $item; done
+  120  ls
+  121  for object in $(head directory_contents.txt); do echo $object; done
+  122  history
+  123  history > history_unix.txt
+  124  ls
+  125  cat history_unix.txt 
+  126  cd ..
+  127  pwd
+  128  mkdir git_lesson
+  129  cd git_lesson/
+  130  ls
+  131  pwd
+  132  git init
+  133  ls
+  134  ls -a
+  135  rm -r .git
+  136  ls -a
+  137  cd .
+  138  pwd
+  139  cd ..
+  140  pwd
+  141  ls
+  142  git init
+  143  ls -a
+  144  git config --global user.name "phate272"
+  145  git config --global user.email "alex.sielaff@gmail.com"
+  146  git config --list
+  147  git add --all
+  148  git commit --message "initialize the workshop directory as a repository"
+  149  ls -a
+  150  cd git_lesson
+  151  pwd
+  152  ls
+  153  ls -a
+  154  touch practice.txt
+  155  touch --help
+  156  ls
+  157  git add practice.txt 
+  158  git commit --message "practiced committing new file"
+  159  git status
+  160  echo "line" >> practice.txt
+  161  cat practice.txt
+  162  git status
+  163  git add practice.txt 
+  164  git status
+  165  git commit --message "more git practice and using >>"
+  166  git status
+  167  git log
+  168  ls
+  169  cat practice.txt 
+  170  history
+  171  echo "adding a new line to the practice.txt file" >> practice.txt
+  172  cat practice.txt 
+  173  git diff
+  174  git status
+  175  pwd
+  176  touch new_file.txt
+  177  ls
+  178  git status
+  179  git diff
+  180  git commit --message "added a line to practice.txt and created the file new_file"
+  181  git add practice.txt 
+  182  git add new_file.txt 
+  183  git status
+  184  git commit --message "added a line to practice.txt and created the file new_file"
+  185  git log
+  186  git remote add origin https://github.com/phate272/workshop.git
+  187  git push -u origin master
+  188  pwd
+  189  git pull
+  190  ls
+  191  nano new_file.txt
+  192  cat new_file.txt 
+  193  git status
+  194  git add new_file.txt 
+  195  git status
+  196  git commit --message "edited new_file.txt"
+  197  git push
+  198  ls
+  199  pwd
+  200  cd ..
+  201  ls
+  202  cd unix_challenge/
+  203  ls
+  204  for item in *.cc.txt; do cat country.txt > all_countries.txt; cat $item >> all_countries.txt; done
+  205  cat all_countries.txt 
+  206  for item in **.cc.txt; do cat $item >> country.txt; done
+  207  cat all_countries.txt 
+  208  cat country.txt
+  209  git restore country.txt
+  210  git status
+  211  cat country.txt
+  212  grep --help
+  213  history > history_git_and_more_unix.txt
