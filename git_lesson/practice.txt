@@ -1,1 +1,2 @@
 line
+adding a new line to the practice.txt file
